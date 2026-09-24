@@ -1,0 +1,6 @@
+Feature,Point_Biserial_Correlation,P_Value,Absolute_Correlation,Significant_at_0.05
+oldpeak,0.4245,0.0,0.4245,True
+thalach,-0.4172,0.0,0.4172,True
+age,0.2231,9e-05,0.2231,True
+trestbps,0.1508,0.008548,0.1508,True
+chol,0.0852,0.139142,0.0852,False

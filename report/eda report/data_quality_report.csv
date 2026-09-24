@@ -1,0 +1,17 @@
+Feature,Data_Type,Missing_Count,Missing_Percentage,Unique_Values,Duplicate_Value_Count
+age,int64,0,0.0,41,262
+sex,int64,0,0.0,2,301
+cp,int64,0,0.0,4,299
+trestbps,int64,0,0.0,50,253
+chol,int64,0,0.0,152,151
+fbs,int64,0,0.0,2,301
+restecg,int64,0,0.0,3,300
+thalach,int64,0,0.0,91,212
+exang,int64,0,0.0,2,301
+oldpeak,float64,0,0.0,40,263
+slope,int64,0,0.0,3,300
+ca,float64,4,1.32,4,298
+thal,float64,2,0.66,3,299
+num,int64,0,0.0,5,298
+target,int64,0,0.0,2,301
+target_label,object,0,0.0,2,301

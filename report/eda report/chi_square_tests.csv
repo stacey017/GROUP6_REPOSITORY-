@@ -1,0 +1,9 @@
+Feature,Chi2,P_Value,Degrees_of_Freedom,Significant_at_0.05
+cp,81.8158,0.0,3,True
+ca,71.8431,0.0,3,True
+slope,45.7846,0.0,2,True
+exang,54.6864,0.0,1,True
+thal,83.2895,0.0,2,True
+sex,22.0426,3e-06,1,True
+restecg,10.0515,0.006567,2,True
+fbs,0.0771,0.781273,1,False

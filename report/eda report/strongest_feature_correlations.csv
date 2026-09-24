@@ -1,0 +1,11 @@
+Feature_1,Feature_2,Spearman_Correlation,Absolute_Correlation
+thalach,oldpeak,-0.4315,0.4315
+age,thalach,-0.3916,0.3916
+age,trestbps,0.2922,0.2922
+age,oldpeak,0.2599,0.2599
+age,chol,0.1913,0.1913
+trestbps,oldpeak,0.1502,0.1502
+trestbps,chol,0.1358,0.1358
+trestbps,thalach,-0.0404,0.0404
+chol,thalach,-0.0383,0.0383
+chol,oldpeak,0.0344,0.0344

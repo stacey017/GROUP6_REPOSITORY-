@@ -1,0 +1,6 @@
+Feature,Skewness,Interpretation
+age,-0.2091,Approximately symmetric
+trestbps,0.706,Moderately skewed
+chol,1.1355,Highly skewed
+thalach,-0.5374,Moderately skewed
+oldpeak,1.2697,Highly skewed

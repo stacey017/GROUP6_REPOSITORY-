@@ -1,0 +1,4 @@
+Insight_Number,Area,Feature,Finding,Evidence,Action,Caution
+1,Numerical Feature Association,oldpeak,oldpeak has the strongest point-biserial association with the binary target among the analyzed numerical features.,Point-biserial correlation = 0.424,Prioritize this feature for further model interpretation and error analysis.,Association does not establish causation.
+2,Categorical Feature Association,thal,thal has the strongest Cramér's V association with the binary target.,Cramér's V = 0.520,Investigate category-level target rates and retain the feature for modeling analysis.,Association does not establish causation.
+3,Distribution,oldpeak,oldpeak has the largest absolute skewness among the analyzed numerical features.,Skewness = 1.270,Flag this distribution for the modeling team when considering preprocessing and algorithm choice.,Skewness alone does not determine whether a transformation is required.

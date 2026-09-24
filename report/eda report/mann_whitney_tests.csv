@@ -1,0 +1,6 @@
+Feature,U_Statistic,P_Value,Significant_at_0.05
+thalach,16989.5,0.0,True
+oldpeak,6037.0,0.0,True
+age,8274.5,3.9e-05,True
+trestbps,9710.0,0.025972,True
+chol,9798.5,0.035359,True

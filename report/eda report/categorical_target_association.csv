@@ -1,0 +1,9 @@
+Feature,Cramers_V
+thal,0.5205
+cp,0.5108
+ca,0.4806
+exang,0.4216
+slope,0.3807
+sex,0.2639
+restecg,0.1632
+fbs,0.0
