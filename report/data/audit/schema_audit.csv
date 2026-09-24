@@ -1,0 +1,15 @@
+column,dtype,missing_count,unique_values
+age,int64,0,41
+sex,int64,0,2
+cp,int64,0,4
+trestbps,int64,0,50
+chol,int64,0,152
+fbs,int64,0,2
+restecg,int64,0,3
+thalach,int64,0,91
+exang,int64,0,2
+oldpeak,float64,0,40
+slope,int64,0,3
+ca,float64,4,4
+thal,float64,2,3
+num,int64,0,5

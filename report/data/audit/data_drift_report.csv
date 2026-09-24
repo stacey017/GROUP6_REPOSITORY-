@@ -1,0 +1,14 @@
+feature,PSI,drift_status
+age,0.5365,Significant Drift
+sex,0.0,Low Drift
+cp,0.0182,Low Drift
+trestbps,0.2998,Significant Drift
+chol,0.2776,Significant Drift
+fbs,0.0,Low Drift
+restecg,0.0,Low Drift
+thalach,0.1028,Moderate Drift
+exang,0.0,Low Drift
+oldpeak,0.1935,Moderate Drift
+slope,0.0114,Low Drift
+ca,0.0896,Low Drift
+thal,0.0076,Low Drift
