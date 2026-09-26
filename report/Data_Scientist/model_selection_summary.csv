@@ -1,0 +1,2 @@
+Selected_Model,Selection_Metric,Selected_CV_F1,Margin_Over_Second_Best_CV_F1
+SVM,5-fold CV F1,0.8270478059951744,0.0025470623842185347

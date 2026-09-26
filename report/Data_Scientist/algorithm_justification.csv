@@ -1,0 +1,5 @@
+Model,Role,Why included,Bias_Variance
+Logistic Regression,Baseline,"Simple, interpretable linear classifier and reference point.",Lower variance and potentially higher bias when relationships are nonlinear.
+Decision Tree,Candidate,Captures nonlinear relationships and interactions.,Can have low bias but high variance when the tree is complex.
+Random Forest,Candidate,Ensemble of trees designed to improve robustness and model nonlinear patterns.,Usually reduces variance relative to a single decision tree.
+SVM,Candidate,Can model complex decision boundaries using kernels.,Regularization parameter C controls the bias-variance tradeoff.

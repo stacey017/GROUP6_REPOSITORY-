@@ -1,0 +1,15 @@
+Item,Value
+Dataset,UCI Heart Disease
+Total Samples,303
+Input Features,13
+Training Samples,242
+Test Samples,61
+CV Strategy,5-fold StratifiedKFold
+Selection Metric,CV F1
+Selected Model,SVM
+Best CV F1,0.827
+Test Accuracy,0.8525
+Test Precision,0.8065
+Test Recall,0.8929
+Test F1,0.8475
+Test ROC-AUC,0.9502

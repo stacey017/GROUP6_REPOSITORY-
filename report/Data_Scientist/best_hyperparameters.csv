@@ -1,0 +1,4 @@
+Model,Best CV F1,Best Parameters
+Decision Tree,0.775223898468283,"{'classifier__criterion': 'entropy', 'classifier__max_depth': 5, 'classifier__min_samples_leaf': 8, 'classifier__min_samples_split': 2}"
+Random Forest,0.8035134069672791,"{'classifier__max_depth': None, 'classifier__max_features': 'log2', 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 2, 'classifier__n_estimators': 300}"
+SVM,0.8270478059951744,"{'classifier__C': 10, 'classifier__gamma': 0.01, 'classifier__kernel': 'rbf'}"
