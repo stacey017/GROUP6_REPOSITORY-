@@ -1,0 +1,35 @@
+{
+    "project": "UCI Heart Disease Classification",
+    "group": "Group 6",
+    "role": "Data Scientist",
+    "dataset": "UCI Heart Disease Dataset",
+    "dataset_id": 45,
+    "samples": 303,
+    "features": 13,
+    "train_samples": 242,
+    "test_samples": 61,
+    "target_definition": "0 = No Disease, 1 = Disease; original num > 0 mapped to 1",
+    "random_state": 42,
+    "test_size": 0.2,
+    "cv_method": "StratifiedKFold",
+    "cv_folds": 5,
+    "selection_metric": "F1",
+    "selected_model": "SVM",
+    "best_cv_f1": 0.8270478059951744,
+    "best_parameters": {
+        "classifier__C": 10,
+        "classifier__gamma": 0.01,
+        "classifier__kernel": "rbf"
+    },
+    "test_accuracy": 0.8524590163934426,
+    "test_precision": 0.8064516129032258,
+    "test_recall": 0.8928571428571429,
+    "test_f1": 0.847457627118644,
+    "test_roc_auc": 0.9502164502164502,
+    "preprocessing": {
+        "numeric_imputation": "median",
+        "numeric_scaling": "StandardScaler",
+        "categorical_imputation": "most_frequent",
+        "categorical_encoding": "OneHotEncoder(handle_unknown='ignore')"
+    }
+}
