@@ -1,0 +1,9 @@
+{
+    "dataset": "UCI Heart Disease",
+    "UCI_dataset_id": 45,
+    "source": "UCI Machine Learning Repository",
+    "task": "Heart Disease Classification",
+    "target_original": "num",
+    "target_transformation": "num > 0 -> 1, num = 0 -> 0",
+    "random_state": 42
+}
