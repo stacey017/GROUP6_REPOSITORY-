@@ -1,163 +1,89 @@
-# GROUP6_REPOSITORY-
-Machine Learning Lab Practical Group Assignment 
-# G6 | MediCare Diagnostics
-## Heart Disease Risk Screening using Machine Learning
+# MediCare Diagnostics: Heart Disease Risk Screening
 
-> **BCDA 5P126 - Machine Learning Lab Mini-Project**
+An educational Streamlit demonstration that applies a trained UCI heart-disease
+classification pipeline to user-entered sample values.
 
----
+> **Not for clinical use.** This project is not a medical device and must not be
+> used to diagnose, treat, or guide healthcare decisions. Do not enter real
+> patient information. Predictions are estimates from a small educational dataset.
 
-## 1. Project Overview
+## Quick start
 
-**MediCare Diagnostics** is an educational machine learning project focused on
-risk screening for coronary heart disease.
+Requires Python 3.11 or newer. From the repository root, create and activate a
+virtual environment:
 
-The objective is to develop a machine learning classification system that
-analyzes patient-related clinical attributes and predicts whether a patient
-is at risk of coronary heart disease.
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
-This project follows an end-to-end Enterprise Machine Learning workflow,
-covering data acquisition, preprocessing, exploratory data analysis,
-feature engineering, model development, evaluation, interpretation, and
-business-oriented visualization.
+On macOS/Linux, activate it with `source .venv/bin/activate`. Then install the
+app and start it:
 
-> **Important:** This project is strictly for educational risk screening
-> purposes and is NOT a clinical diagnostic system.
+```sh
+python -m pip install -r requirements.txt
+python -m streamlit run app/streamlit_app.py --server.address 127.0.0.1 --server.port 8501
+```
 
----
+Open <http://localhost:8501>. Stop the app with `Ctrl+C`.
 
-## 2. Client Persona
+To run the automated tests, install the development extra and run pytest:
 
-### Client
-**MediCare Diagnostics**
+```sh
+python -m pip install -e ".[dev]"
+python -m pytest
+```
 
-### Domain
-**Clinical Health / Healthcare Analytics**
+## Public demo link with ngrok
 
-### Business Problem
+The app binds to localhost by default. To share it temporarily, install ngrok on
+your own computer, sign in to your own ngrok account, and configure your own
+authtoken. On Windows with winget:
 
-Healthcare organizations need reliable analytical tools to identify
-patients who may require further medical evaluation.
+```powershell
+winget install --id Ngrok.Ngrok --exact
+```
 
-The objective of this project is to build a machine learning-based
-educational screening system that predicts coronary heart disease risk
-from patient health attributes.
+Open a new terminal after installation, then add your account token. Never share
+or commit the token:
 
-The system is designed to support early risk identification while
-highlighting the importance of minimizing false-negative predictions.
+```sh
+ngrok config add-authtoken YOUR_NGROK_AUTHTOKEN
+```
 
----
+Keep Streamlit running in one terminal. In another terminal, run:
 
-## 3. Problem Statement
+```sh
+ngrok http 8501
+```
 
-Build a binary classification model using the UCI Heart Disease dataset
-to predict the presence or absence of coronary heart disease.
+Share the HTTPS forwarding URL ngrok prints. The URL is temporary and may change
+when the tunnel restarts. Anyone with the URL can access the app while both
+processes are running. See [deployment notes](docs/deployment.md).
 
-The machine learning pipeline should:
-
-- Acquire and validate the dataset
-- Clean missing and invalid values
-- Perform exploratory data analysis
-- Engineer and select relevant features
-- Apply leakage-free preprocessing
-- Train baseline and machine learning models
-- Evaluate model performance
-- Analyze classification errors
-- Integrate predictions into business-oriented analytics
-- Present key findings through an interactive dashboard
-
----
-
-## 4. Dataset
-
-### Dataset Name
-**UCI Heart Disease Dataset**
-
-### Dataset Type
-Clinical / Medical Classification Dataset
-
-### Target
-Heart disease presence / absence
-
-### Source
-UCI Machine Learning Repository
-
-The dataset is used as specified in the Machine Learning Lab project
-guide for Group 6.
-
-### Dataset-Specific Considerations
-
-- The dataset is relatively small.
-- Missing values and data quality must be handled carefully.
-- Feature preprocessing must prevent data leakage.
-- Model limitations must be clearly documented.
-- Results should not be interpreted as medical diagnosis.
-
----
-
-## 5. Primary Evaluation Metrics
-
-The primary metrics specified for Group 6 are:
-
-### Recall (Sensitivity)
-
-Recall is particularly important because false-negative predictions,
-where a patient at risk is classified as low-risk, represent an important
-screening concern.
-
-### Log-Loss
-
-Log-Loss evaluates the quality of predicted probabilities and penalizes
-overconfident incorrect predictions.
-
-### Additional Metrics
-
-Where applicable, the project also evaluates:
-
-- Accuracy
-- Precision
-- F1-Score
-- Confusion Matrix
-- ROC-AUC
-
-The project does not rely on accuracy alone when interpreting model
-performance.
-
----
-
-## 6. Machine Learning Workflow
-
-The project follows an end-to-end machine learning lifecycle:
+## Repository layout
 
 ```text
-Problem Definition
-        ↓
-Dataset Acquisition
-        ↓
-Data Validation & Cleaning
-        ↓
-Exploratory Data Analysis
-        ↓
-Feature Engineering
-        ↓
-Feature Selection
-        ↓
-Train/Test Split
-        ↓
-Leakage-Free Preprocessing
-        ↓
-Baseline Model
-        ↓
-Machine Learning Models
-        ↓
-Hyperparameter Tuning
-        ↓
-Model Evaluation
-        ↓
-Error Analysis
-        ↓
-Prediction / Inference
-        ↓
-Dashboard
-        ↓
-Business Insights & Recommendations
+app/                    Streamlit user interface
+src/medicare_app/       Prediction and input-validation package
+models/                 Versioned trained model and metadata
+tests/                  Automated model and input validation tests
+docs/                   Deployment and operational notes
+research/data/          Source datasets used in the project
+research/notebooks/     Original assignment and analysis notebooks
+research/outputs/       Generated figures
+research/reports/       Analysis, audit, and modeling reports
+```
+
+## Model and input details
+
+The app loads the repository's trusted model artifact at
+`models/heart_disease_final_model_v1.pkl`. Its preprocessing pipeline handles
+missing values and categorical encoding. The prediction module validates the
+13 expected input fields and category codes before calling the model.
+
+Only load model artifacts from a trusted source: joblib model files are
+Python-pickle based and can execute code when loaded.
+
+The project is a student ML demonstration, not a production clinical service.
+It has no authentication, patient-data persistence, or clinical validation.
